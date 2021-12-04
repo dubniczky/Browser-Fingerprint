@@ -1,3 +1,13 @@
+
+/**
+ * Returns the md5 hash of the given string represented as a hexadecimal string.
+ */
+export default function md5(s:string) : string
+{
+    return hex(md51(s))
+}
+
+
 function md5cycle(x:Array<number>, k:Array<number>) : void
 {
     let a = x[0]
@@ -156,8 +166,8 @@ function rhex(n:number) : string
     let s = ''
     for (let j = 0; j < 4; j++)
     {
-        s += hexCharset[(n >> (j * 8 + 4)) & 0x0F]
-           + hexCharset[(n >> (j * 8)) & 0x0F]
+        s += hexCharset[(n >> (j * 8 + 4)) & 0x0f]
+           + hexCharset[(n >> (j * 8)) & 0x0f]
     }        
     return s
 }
@@ -176,9 +186,4 @@ function hex(x:Array<number>) : string
 function add32(a:number, b:number)
 {
     return (a + b) & 0xffffffff
-}
-
-export default function md5(s:string) : string
-{
-    return hex(md51(s))
 }
