@@ -8,6 +8,7 @@ export async function run()
 
     return {
         fingerprint: md5(propstring),
+        version: 'v0.2',
         details: properties
     }
 }
