@@ -24,6 +24,8 @@ module.exports =
     {
         filename: 'browser-fingerprint.js',
         path: path.resolve(__dirname, 'dist'),
+        libraryTarget: 'var',
+        library: 'fingerprint'
     },
     optimization:
     {

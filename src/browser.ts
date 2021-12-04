@@ -7,6 +7,8 @@ import Gpu from './properties/gpu'
 import WindowWorker from './properties/worker'
 import Plugins from './properties/plugins'
 import UserAgent from './properties/useragent'
+import Language from './properties/language'
+import BrowserName from './properties/browsername'
 
 
 //Properties interface
@@ -19,6 +21,8 @@ export interface PersistentProperties
     "browser.worker": ReturnType<typeof WindowWorker>,
     "browser.agent": ReturnType<typeof UserAgent>,
     "browser.plugins": ReturnType<typeof Plugins>,
+    "browser.language": ReturnType<typeof Language>,
+    "browser.name": ReturnType<typeof BrowserName>,
 }
 
 
@@ -33,7 +37,9 @@ export async function props() : Promise<PersistentProperties>
 
         "browser.worker": WindowWorker(),
         "browser.agent": UserAgent(),
-        "browser.plugins": Plugins()
+        "browser.plugins": Plugins(),
+        "browser.language": Language(),
+        "browser.name": BrowserName(),
     }
 
     return props

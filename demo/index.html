@@ -8,6 +8,16 @@
     </head>
     <body>
         
-        <script src="../dist/browser-fingerprint.js"></script>
+        
     </body>
+    <script src="../dist/browser-fingerprint.js"></script>
+    <script>
+        async function run()
+        {
+            let fingperprint = await fingerprint.run()
+            document.body.innerHTML = JSON.stringify( fingperprint.fingerprint )
+            console.log(fingperprint)
+        }
+        run()
+    </script>
 </html>
