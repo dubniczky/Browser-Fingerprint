@@ -3,7 +3,7 @@ import * as system from './modules/system'
 import * as browser from './modules/browser'
 
 
-//Properties interface
+//Peroperty interfaces
 export interface PersistentProperties
 {
     "system.os":        ReturnType<typeof system.os>,
@@ -19,11 +19,23 @@ export interface PersistentProperties
     "browser.name":     ReturnType<typeof browser.name>,
 }
 
+export interface VolatileProperties
+{
+    "browser.width":  ReturnType<typeof browser.width>,
+    "browser.height":  ReturnType<typeof browser.height>,
+}
+
+export interface Properties
+{
+    persistent: PersistentProperties,
+    volatile: VolatileProperties
+}
+
 
 //Gather properties
-export async function props() : Promise<PersistentProperties>
+export async function props() : Promise<Properties>
 {
-    let props:PersistentProperties =
+    let persistent:PersistentProperties =
     {
         "system.os":        system.os(),
         "system.cores":     system.cores(),
@@ -38,5 +50,11 @@ export async function props() : Promise<PersistentProperties>
         "browser.name":     browser.name()
     }
 
-    return props
+    let volatile:VolatileProperties =
+    {
+        "browser.width": browser.width(),
+        "browser.height": browser.height(),
+    }
+
+    return { persistent, volatile }
 }

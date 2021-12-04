@@ -63,3 +63,21 @@ export function name() : string
 {
     return (navigator.appName ?? null) + ',' + (navigator.appName ?? null)
 }
+
+
+/**
+ * Get current browser window height using `window.outerWidth`
+ */
+export function width() : number
+{
+    return window.outerWidth
+}
+
+
+/**
+ * Get current browser window height using `window.outerHeight`
+ */
+export function height() : number
+{
+    return window.outerHeight
+}
