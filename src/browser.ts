@@ -2,7 +2,7 @@
 import OperatingSystem from './properties/os'
 import Cores from './properties/cores'
 import Gpu from './properties/gpu'
-import ScreenSize from './properties/screensize'
+import Screen from './properties/screen'
 
 //Browser
 import WindowWorker from './properties/worker'
@@ -18,7 +18,7 @@ export interface PersistentProperties
     "system.os":         ReturnType<typeof OperatingSystem>,
     "system.cores":      ReturnType<typeof Cores>,
     "system.gpu":        ReturnType<typeof Gpu>,
-    "system.screensize": ReturnType<typeof ScreenSize>,
+    "system.screen": ReturnType<typeof Screen>,
 
     "browser.worker":   ReturnType<typeof WindowWorker>,
     "browser.agent":    ReturnType<typeof UserAgent>,
@@ -36,7 +36,7 @@ export async function props() : Promise<PersistentProperties>
         "system.os": OperatingSystem(),
         "system.cores": Cores(),
         "system.gpu": Gpu(),
-        "system.screensize": ScreenSize(),
+        "system.screen": Screen(),
 
         "browser.worker": WindowWorker(),
         "browser.agent": UserAgent(),
