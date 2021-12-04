@@ -1,5 +1,5 @@
 /**
- * Returns whether `window.Worker` is supported
+ * Returns whether `window.Worker` is supported.
  */
 export function worker() : boolean
 {
@@ -10,7 +10,7 @@ export function worker() : boolean
 /**
  * Returns a `navigator.userAgent` string without versions for persistence after updates.
  */
-export function agent() : string
+export function cleanagent() : string
 {
     let userAgent:string = window.navigator.userAgent
     
@@ -23,7 +23,7 @@ export function agent() : string
 
 /**
  * Returns a list of installeg plugins using `navigator.plugins`.
- * Deprecated, will be removed in the future
+ * Deprecated, will be removed in the future.
  */
 export function plugins() : string
 {
@@ -48,7 +48,7 @@ export function plugins() : string
 
 
 /**
- * Gets the browser language using `navigator.language`
+ * Gets the browser language using `navigator.language`.
  */
 export function language() : string
 {
@@ -57,7 +57,7 @@ export function language() : string
 
 
 /**
- * Gets the browser app name using `navigator.appName` and `navigator.appCodeName`
+ * Gets the browser app name using `navigator.appName` and `navigator.appCodeName`.
  */
 export function name() : string
 {
@@ -66,7 +66,7 @@ export function name() : string
 
 
 /**
- * Get current browser window height using `window.outerWidth`
+ * Get current browser window height using `window.outerWidth`.
  */
 export function width() : number
 {
@@ -75,9 +75,18 @@ export function width() : number
 
 
 /**
- * Get current browser window height using `window.outerHeight`
+ * Get current browser window height using `window.outerHeight`.
  */
 export function height() : number
 {
     return window.outerHeight
+}
+
+
+/**
+ * Returns a `navigator.userAgent` string.
+ */
+export function agent() : string
+{
+    return window.navigator.userAgent
 }

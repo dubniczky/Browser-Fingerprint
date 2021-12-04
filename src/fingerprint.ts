@@ -13,7 +13,7 @@ export interface PersistentProperties
     "system.battery":   ReturnType<typeof system.battery>,
 
     "browser.worker":   ReturnType<typeof browser.worker>,
-    "browser.agent":    ReturnType<typeof browser.agent>,
+    "browser.agent":    ReturnType<typeof browser.cleanagent>,
     "browser.plugins":  ReturnType<typeof browser.plugins>,
     "browser.language": ReturnType<typeof browser.language>,
     "browser.name":     ReturnType<typeof browser.name>,
@@ -22,7 +22,8 @@ export interface PersistentProperties
 export interface VolatileProperties
 {
     "browser.width":  ReturnType<typeof browser.width>,
-    "browser.height":  ReturnType<typeof browser.height>,
+    "browser.height": ReturnType<typeof browser.height>,
+    "browser.agent":  ReturnType<typeof browser.agent>,
 }
 
 export interface Properties
@@ -44,7 +45,7 @@ export async function props() : Promise<Properties>
         "system.battery":   system.battery(),
 
         "browser.worker":   browser.worker(),
-        "browser.agent":    browser.agent(),
+        "browser.agent":    browser.cleanagent(),
         "browser.plugins":  browser.plugins(),
         "browser.language": browser.language(),
         "browser.name":     browser.name()
@@ -52,8 +53,9 @@ export async function props() : Promise<Properties>
 
     let volatile:VolatileProperties =
     {
-        "browser.width": browser.width(),
+        "browser.width":  browser.width(),
         "browser.height": browser.height(),
+        "browser.agent":  browser.agent(),
     }
 
     return { persistent, volatile }
