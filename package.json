@@ -1,0 +1,21 @@
+{
+  "name": "browser-fingerprint",
+  "version": "1.0.0",
+  "description": "Fingerprinting browsers with persistent capabilities without cookies or local storage.",
+  "repository": "https://gitlab.com/richard-nagy/browser-fingerprint.git",
+  "author": "Richard Nagy <nagy.richard.antal@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch --mode development --config ./webpack.config.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/web": "^0.0.47",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  }
+}
