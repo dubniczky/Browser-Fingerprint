@@ -7,7 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build:debug": "webpack --mode development --config ./webpack.config.js",
+    "build:release": "webpack --mode production --config ./webpack.config.js",
     "watch": "webpack --watch --mode development --config ./webpack.config.js"
   },
   "dependencies": {},

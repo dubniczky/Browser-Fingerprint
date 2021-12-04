@@ -3,7 +3,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
  
 module.exports =
 {
-    entry: './src/index.ts',
+    entry: './src/main.ts',
     devtool: 'inline-source-map',
     module:
     {
@@ -27,6 +27,9 @@ module.exports =
     },
     optimization:
     {
-        minimizer: [new UglifyJsPlugin()],
-    },
+        minimizer:
+        [
+            new UglifyJsPlugin()
+        ]
+    }
 }
