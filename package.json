@@ -1,8 +1,8 @@
 {
   "name": "browser-fingerprint",
   "version": "1.0.0",
-  "description": "Fingerprinting browsers with persistent capabilities without cookies or local storage.",
-  "repository": "https://gitlab.com/richard-nagy/browser-fingerprint.git",
+  "description": "Creates a unique identifier (fingerprint) based on intrinsic properties of a browser and it's parent system without saving any session or cookie data.",
+  "repository": "https://gitlab.com/richardnagy/security/browser-fingerprint",
   "author": "Richard Nagy <nagy.richard.antal@gmail.com>",
   "license": "MIT",
   "private": true,
