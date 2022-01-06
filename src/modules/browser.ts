@@ -52,7 +52,7 @@ export function plugins() : string
  */
 export function name() : string
 {
-    return (navigator.appName ?? null) + ',' + (navigator.appName ?? null)
+    return (navigator.appName ?? null) + ',' + (navigator.appCodeName ?? null) + ',' + (navigator.appVersion ?? null)
 }
 
 
