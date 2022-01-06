@@ -48,15 +48,6 @@ export function plugins() : string
 
 
 /**
- * Gets the browser language using `navigator.language`.
- */
-export function language() : string
-{
-    return navigator.language
-}
-
-
-/**
  * Gets the browser app name using `navigator.appName` and `navigator.appCodeName`.
  */
 export function name() : string
@@ -89,4 +80,13 @@ export function height() : number
 export function agent() : string
 {
     return window.navigator.userAgent
+}
+
+
+/**
+ * Returns a `navigator.languages` as semicolon separated string.
+ */
+export function language() : string
+{
+    return navigator.languages.join(';')
 }

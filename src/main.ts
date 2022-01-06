@@ -3,12 +3,12 @@ import md5 from './md5'
 
 export async function run()
 {
-    const properties:browser.Properties = await browser.props()
-    const propstring:string = JSON.stringify(properties)
+    const props:browser.Properties = await browser.props()
 
     return {
-        fingerprint: md5(propstring),
-        version: 'v0.2',
-        details: properties
+        fingerprint: md5(JSON.stringify(props.persistent)),
+        volatileFingerprint: md5(JSON.stringify(props.volatile)),
+        version: 'v0.3',
+        details: props
     }
 }

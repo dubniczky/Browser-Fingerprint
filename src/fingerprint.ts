@@ -38,11 +38,11 @@ export async function props() : Promise<Properties>
 {
     let persistent:PersistentProperties =
     {
-        "system.os":        system.os(),
-        "system.cores":     system.cores(),
-        "system.gpu":       system.gpu(),
-        "system.screen":    system.screen(),
-        "system.battery":   system.battery(),
+        "system.os":      system.os(),
+        "system.cores":   system.cores(),
+        "system.gpu":     system.gpu(),
+        "system.screen":  system.screen(),
+        "system.battery": system.battery(),
 
         "browser.worker":   browser.worker(),
         "browser.agent":    browser.cleanagent(),
