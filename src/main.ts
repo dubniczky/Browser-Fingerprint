@@ -8,7 +8,7 @@ export async function run()
     return {
         fingerprint: md5(JSON.stringify(props.persistent)),
         volatileFingerprint: md5(JSON.stringify(props.volatile)),
-        version: 'v0.3',
+        version: 'v0.2',
         details: props
     }
 }
