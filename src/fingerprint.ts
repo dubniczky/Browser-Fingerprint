@@ -6,11 +6,12 @@ import * as browser from './modules/browser'
 //Peroperty interfaces
 export interface PersistentProperties
 {
-    "system.os":        ReturnType<typeof system.os>,
-    "system.cores":     ReturnType<typeof system.cores>,
-    "system.gpu":       ReturnType<typeof system.gpu>,
-    "system.screen":    ReturnType<typeof system.screen>,
-    "system.battery":   ReturnType<typeof system.battery>,
+    "system.os":      ReturnType<typeof system.os>,
+    "system.cores":   ReturnType<typeof system.cores>,
+    "system.gpu":     ReturnType<typeof system.gpu>,
+    "system.screen":  ReturnType<typeof system.screen>,
+    "system.battery": ReturnType<typeof system.battery>,
+    "system.touch":   ReturnType<typeof system.touch>,
 
     "browser.worker":   ReturnType<typeof browser.worker>,
     "browser.agent":    ReturnType<typeof browser.cleanagent>,
@@ -43,6 +44,7 @@ export async function props() : Promise<Properties>
         "system.gpu":     system.gpu(),
         "system.screen":  system.screen(),
         "system.battery": system.battery(),
+        "system.touch":   system.touch(),
 
         "browser.worker":   browser.worker(),
         "browser.agent":    browser.cleanagent(),

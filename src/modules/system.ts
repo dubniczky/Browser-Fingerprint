@@ -69,3 +69,17 @@ export function battery() : boolean
         return null
     }
 }
+
+
+/**
+ * Predicts if the system has a touch screen using navigator and window events.
+ */
+export function touch() : boolean
+{
+    return 'ontouchstart' in window ||
+           'DocumentTouch' in window ||
+           window.matchMedia( "(pointer: coarse)" ).matches ||
+           navigator.maxTouchPoints > 0 ||
+           //@ts-ignore
+           navigator.msMaxTouchPoints > 0
+}
